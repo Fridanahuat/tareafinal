@@ -7,7 +7,7 @@ package proyectocalcu;
 
 /**
  *
- * @author jesus
+ * @author fridanahuat
  */
 public class Proyectocalcu {
 
@@ -15,7 +15,9 @@ public class Proyectocalcu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       ventana ver=new ventana();
+       ver.setVisible(true);
+       ver.setLocationRelativeTo(null);
     }
     
 }
