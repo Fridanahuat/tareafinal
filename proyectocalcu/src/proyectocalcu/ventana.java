@@ -5,6 +5,8 @@
  */
 package proyectocalcu;
 
+import java.awt.Color;
+
 /**
  *
  * @author jesus
@@ -15,7 +17,22 @@ public class ventana extends javax.swing.JFrame {
      * Creates new form ventana
      */
     public ventana() {
+         setUndecorated(true);
+        setBackground(new Color(102,102,102,205));
+        //setOpacity(0.5f);
         initComponents();
+        //setLocationRelativeTo(null);
+        this.setExtendedState(this.MAXIMIZED_BOTH);
+        //SetImageLabel(login, "src/imagenes/es el login.jpg");
+        setSize(1140, 902);
+        setResizable(false);
+        
+        
+        
+        
+        
+        
+      
     }
 
     /**
@@ -27,21 +44,240 @@ public class ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        pass = new javax.swing.JLabel();
+        separadorUsua = new javax.swing.JSeparator();
+        inicio = new javax.swing.JLabel();
+        separadorPass = new javax.swing.JSeparator();
+        texto = new javax.swing.JLabel();
+        txtusuario = new javax.swing.JTextField();
+        contra = new javax.swing.JLabel();
+        txtpass = new javax.swing.JPasswordField();
+        fentrar = new javax.swing.JPanel();
+        entrar = new javax.swing.JLabel();
+        usuario = new javax.swing.JLabel();
+        error = new javax.swing.JLabel();
+        login = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        pass.setFont(new java.awt.Font("Tw Cen MT", 1, 30)); // NOI18N
+        pass.setForeground(new java.awt.Color(163, 163, 163));
+        pass.setText("**********");
+        getContentPane().add(pass);
+        pass.setBounds(50, 717, 130, 30);
+
+        separadorUsua.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(separadorUsua);
+        separadorUsua.setBounds(50, 550, 550, 2);
+
+        inicio.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        inicio.setForeground(new java.awt.Color(245, 245, 245));
+        inicio.setText("INICIAR SESIÓN");
+        getContentPane().add(inicio);
+        inicio.setBounds(50, 360, 250, 40);
+
+        separadorPass.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(separadorPass);
+        separadorPass.setBounds(50, 750, 550, 2);
+
+        texto.setFont(new java.awt.Font("Tw Cen MT", 1, 30)); // NOI18N
+        texto.setForeground(new java.awt.Color(163, 163, 163));
+        texto.setText("Ingrese su nombre de usuario");
+        getContentPane().add(texto);
+        texto.setBounds(50, 516, 400, 30);
+
+        txtusuario.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        txtusuario.setForeground(new java.awt.Color(204, 204, 204));
+        txtusuario.setBorder(null);
+        txtusuario.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtusuario.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        txtusuario.setOpaque(false);
+        txtusuario.setVerifyInputWhenFocusTarget(false);
+        txtusuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtusuarioMousePressed(evt);
+            }
+        });
+        txtusuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtusuarioKeyTyped(evt);
+            }
+        });
+        getContentPane().add(txtusuario);
+        txtusuario.setBounds(50, 510, 550, 40);
+
+        contra.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        contra.setForeground(new java.awt.Color(245, 245, 245));
+        contra.setText("CONTRASEÑA");
+        getContentPane().add(contra);
+        contra.setBounds(50, 650, 220, 40);
+
+        txtpass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        txtpass.setForeground(new java.awt.Color(204, 204, 204));
+        txtpass.setBorder(null);
+        txtpass.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtpass.setOpaque(false);
+        txtpass.setVerifyInputWhenFocusTarget(false);
+        txtpass.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtpassMousePressed(evt);
+            }
+        });
+        getContentPane().add(txtpass);
+        txtpass.setBounds(50, 715, 550, 32);
+
+        fentrar.setBackground(new java.awt.Color(39, 49, 122));
+        fentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fentrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fentrarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                fentrarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                fentrarMouseExited(evt);
+            }
+        });
+        fentrar.setLayout(null);
+
+        entrar.setFont(new java.awt.Font("Tw Cen MT", 1, 34)); // NOI18N
+        entrar.setForeground(new java.awt.Color(211, 90, 47));
+        entrar.setText("ENTRAR");
+        entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                entrarMouseClicked(evt);
+            }
+        });
+        fentrar.add(entrar);
+        entrar.setBounds(25, 15, 120, 30);
+
+        getContentPane().add(fentrar);
+        fentrar.setBounds(810, 620, 170, 60);
+
+        usuario.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        usuario.setForeground(new java.awt.Color(245, 245, 245));
+        usuario.setText("USUARIO");
+        getContentPane().add(usuario);
+        usuario.setBounds(50, 450, 180, 40);
+
+        error.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
+        error.setForeground(new java.awt.Color(255, 0, 0));
+        error.setText("<html><center>Favor de rellenar <p>TODOS<p> los campos de texto");
+        error.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(error);
+        error.setBounds(760, 270, 320, 190);
+
+        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/es el login.jpg"))); // NOI18N
+        login.setFocusTraversalPolicyProvider(true);
+        login.setPreferredSize(new java.awt.Dimension(1140, 902));
+        getContentPane().add(login);
+        login.setBounds(0, 0, 1130, 902);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtusuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtusuarioMousePressed
+        if (texto.getText().equals("Ingrese su nombre de usuario")){
+            texto.setText("");
+            txtusuario.setForeground(new Color(240,240,240));
+        }
+        if (txtpass.getText().isEmpty()){
+            pass.setText("**********");
+            txtusuario.setForeground(new Color(240,240,240));
+        }
+        error.setVisible(false);
+        separadorPass.setBackground(Color.WHITE);
+        separadorPass.setForeground(Color.WHITE);
+        separadorUsua.setBackground(Color.WHITE);
+        separadorUsua.setForeground(Color.WHITE);
+        texto.setForeground(new Color(163,163,163));
+        pass.setForeground(new Color(163,163,163));
+    }//GEN-LAST:event_txtusuarioMousePressed
+
+    private void txtusuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtusuarioKeyTyped
+        char validar=evt.getKeyChar();
+
+        if (Character.isLetter(validar) || evt.getKeyChar()==32 || evt.getKeyChar()==8)
+        {
+
+        }
+        else{
+            getToolkit().beep();
+            evt.consume();
+
+            error.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 42));
+            error.setText("<html><center>Ingresar solo <p>LETRAS");
+            error.setVisible(true);
+            separadorUsua.setBackground(Color.red);
+            separadorUsua.setForeground(Color.red);
+        }
+        if (txtusuario.getText().length()>=256)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtusuarioKeyTyped
+
+    private void txtpassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtpassMousePressed
+        if (pass.getText().equals("**********")){
+            pass.setText("");
+            txtpass.setForeground(new Color(240,240,204));
+        }/*if (String.valueOf(txtpass.getPassword()).equals("**********")){
+            txtpass.setText("");
+            txtpass.setForeground(new Color(240,240,240));
+        }*/
+        if (txtusuario.getText().isEmpty()){
+            texto.setText("Ingrese su nombre de usuario");
+            txtusuario.setForeground(new Color(240,240,240));
+        }
+        error.setVisible(false);
+        separadorUsua.setBackground(Color.WHITE);
+        separadorUsua.setForeground(Color.WHITE);
+        separadorPass.setBackground(Color.WHITE);
+        separadorPass.setForeground(Color.WHITE);
+        texto.setForeground(new Color(240,240,240));
+        pass.setForeground(new Color(240,240,240));
+    }//GEN-LAST:event_txtpassMousePressed
+
+    private void entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarMouseClicked
+        if (txtusuario.getText().isEmpty() || txtpass.getText().isEmpty()){
+            getToolkit().beep();
+            error.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36));
+            error.setText("<html><center>Favor de rellenar <p>TODOS<p> los campos de texto");
+            error.setVisible(true);
+            separadorUsua.setBackground(Color.red);
+            separadorUsua.setForeground(Color.red);
+            separadorPass.setBackground(Color.red);
+            separadorPass.setForeground(Color.red);
+            texto.setForeground(Color.red);
+            pass.setForeground(Color.red);
+        }
+    }//GEN-LAST:event_entrarMouseClicked
+
+    private void fentrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fentrarMouseClicked
+        if (txtusuario.getText().isEmpty() || txtpass.getText().isEmpty()){
+            getToolkit().beep();
+            error.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36));
+            error.setText("<html><center>Favor de rellenar <p>TODOS<p> los campos de texto");
+            error.setVisible(true);
+            separadorUsua.setBackground(Color.red);
+            separadorUsua.setForeground(Color.red);
+            separadorPass.setBackground(Color.red);
+            separadorPass.setForeground(Color.red);
+            texto.setForeground(Color.red);
+            pass.setForeground(Color.red);
+        }
+    }//GEN-LAST:event_fentrarMouseClicked
+
+    private void fentrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fentrarMouseEntered
+        fentrar.setBackground(new Color(55,84,173));
+    }//GEN-LAST:event_fentrarMouseEntered
+
+    private void fentrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fentrarMouseExited
+        fentrar.setBackground(new Color(39,49,122));
+    }//GEN-LAST:event_fentrarMouseExited
 
     /**
      * @param args the command line arguments
@@ -79,5 +315,18 @@ public class ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel contra;
+    private javax.swing.JLabel entrar;
+    private javax.swing.JLabel error;
+    private javax.swing.JPanel fentrar;
+    private javax.swing.JLabel inicio;
+    private javax.swing.JLabel login;
+    private javax.swing.JLabel pass;
+    private javax.swing.JSeparator separadorPass;
+    private javax.swing.JSeparator separadorUsua;
+    private javax.swing.JLabel texto;
+    private javax.swing.JPasswordField txtpass;
+    private javax.swing.JTextField txtusuario;
+    private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }
